@@ -21,10 +21,10 @@ export default function Display(){
     const [studentstoshow,setStudentstoshow]=useState([]);
     const [flag,setFlag]=useState(0)
     function fetchData(){
-        fetch(`http://localhost:4040/getallmentors`)
+        fetch(`https://assign-mongo.herokuapp.com/getallmentors`)
         .then(data=>data.json())
         .then(d=>{setMentors(d)});
-        fetch(`http://localhost:4040/getallstudents`)
+        fetch(`https://assign-mongo.herokuapp.com/getallstudents`)
         .then(data=>data.json())
         .then(d=>setStudents(d));
     }

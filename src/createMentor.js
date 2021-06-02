@@ -14,7 +14,7 @@ export default function CreateMentor(){
             "dept":document.getElementById("mentor_dept").value
         }
         console.log(send_mentor_data);
-        var r=await fetch('http://localhost:4040/addmentor',{
+        var r=await fetch('https://assign-mongo.herokuapp.com/addmentor',{
             method:"POST",
             headers: {
                 'Content-Type': 'application/json;charset=UTF-8'

@@ -11,10 +11,10 @@ export default function AssignMentor(){
      setOpen(false);
       };
     function fetchData(){
-        fetch("http://localhost:4040/getstudents")
+        fetch("https://assign-mongo.herokuapp.com/getstudents")
         .then(data=>data.json())
         .then(d=>{setStudents(d);/*console.log(d)*/})
-        fetch("http://localhost:4040/getmentors")
+        fetch("https://assign-mongo.herokuapp.com/getmentors")
         .then(data=>data.json())
         .then(d=>{setMentors(d);/*console.log(d)*/})
     }
@@ -37,7 +37,7 @@ export default function AssignMentor(){
         })
         console.log(student_array);
         console.log(mentor_id,mentor_name);
-        var r=await fetch('http://localhost:4040/assignmentor',{
+        var r=await fetch('https://assign-mongo.herokuapp.com/assignmentor',{
             method:"POST",
             headers: {
                 'Content-Type': 'application/json;charset=UTF-8'

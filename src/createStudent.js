@@ -14,7 +14,7 @@ export default function CreateStudent(){
             "year":document.getElementById("stud_year").value
         }
         console.log(send_student_data);
-        var r=await fetch('http://localhost:4040/addstudent',{
+        var r=await fetch('https://assign-mongo.herokuapp.com/addstudent',{
             method:"POST",
             headers: {
                 'Content-Type': 'application/json;charset=UTF-8'
