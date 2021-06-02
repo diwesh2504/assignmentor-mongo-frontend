@@ -102,9 +102,7 @@ export default function AssignMentor(){
                     </table>
                     
                 </div>
-                <div className="col-sm-1 col-md-2 col-lg-2">
-                    <button onClick={assign} className="btn btn-primary btn-sm">Assign</button>
-                </div>
+                <div className="col-sm-1 col-md-2 col-lg-2"></div>
             </div>
             <Snackbar
         anchorOrigin={{
@@ -115,6 +113,7 @@ export default function AssignMentor(){
         autoHideDuration={1500}
         onClose={snackbarClose}
         message={mess}/>
+         <button onClick={assign} style={{marginLeft:"40%"}} className="btn btn-primary btn-sm">Assign</button>
         </div>
     )
 }
